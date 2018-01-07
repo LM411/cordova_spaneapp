@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="www.nsgplesotho.com" version="1.0.0" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+
+  versionCode is Android only
+  version is in major.minor.patch format 
+                                          <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="HandleOpenUrl">
+        <param name="ios-package" value="CDVHandleOpenURL" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="IntentAndNavigationFilter">
+        <param name="ios-package" value="CDVIntentAndNavigationFilter" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="GestureHandler">
+        <param name="ios-package" value="CDVGestureHandler" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Spane</name>
+    <description>
+      A job seeking platform to help better your chances for that dream job
+  </description>
+    <author email="lehlohonolomakoti@nsgplesotho.com" href="https://nsgplesotho.com">
+      Neko Ntsane
+      Nvulane Nhlapo
+      Lehlohonolo Makoti
+  </author>
+    <content src="index.html" />
+    <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <access browserOnly="true" origin="*selibeng.com" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="whatsapp:*" />
+    <allow-intent href="mailto:*" />
+    <access origin="*" />
+    <splash src="img/splash.png" />
+    <splash src="audio/splash_sound.mp3" />
+    <icon src="img/icon_.png" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <preference name="orientation" value="portrait" />
+    <preference name="KeepRunning" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+</widget>

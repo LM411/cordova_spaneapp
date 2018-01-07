@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="www.nsgplesotho.com" version="1.0.0" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+
+  versionCode is Android only
+  version is in major.minor.patch format 
+                                  <name>Spane</name>
+    <description>
+      A job seeking platform to help better your chances for that dream job
+  </description>
+    <author email="lehlohonolomakoti@nsgplesotho.com" href="https://nsgplesotho.com">
+      Neko Ntsane
+      Nvulane Nhlapo
+      Lehlohonolo Makoti
+  </author>
+    <content src="index.html" />
+    <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <access browserOnly="true" origin="*selibeng.com" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="whatsapp:*" />
+    <allow-intent href="mailto:*" />
+    <access origin="*" />
+    <splash src="img/splash.png" />
+    <splash src="audio/splash_sound.mp3" />
+    <icon src="img/icon_.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="orientation" value="portrait" />
+    <preference name="KeepRunning" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+</widget>

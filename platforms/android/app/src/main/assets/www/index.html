@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#2196f3">
+  <title>Spane | Work</title>
+  <!--Stylesheet import-->
+  <link rel="stylesheet" href="css/framework7.material.css">
+  <link rel="stylesheet" href="css/framework7.material.colors.css">
+  <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/material-icons.css">
+  <link rel="stylesheet" href="css/framework7-icons.css">
+  <link rel="stylesheet" href="css/my-app.css">
+  <link rel="stylesheet" href="css/kitchen-sink.css">
+  <link rel="icon" href="img/icon.png">
+  <link rel="manifest" href="css/manifest.json">
+  <script src="js/jquery.min.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready(function() {
+  // Initialize your app
+  var myApp = new Framework7();
+  function loadURL(url){
+    navigator.app.loadUrl(url, { openExternal:true });
+    return false;
+  } 
+});
+</script>
+
+<body class="theme-teal">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div data-page="panel-left" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="content-block-title"><center>#RespectYourHustle</center></div>
+                <img src="img/icon_.png">
+              <div class="content-block">
+                <center>Selibeng | Spane | LesCas</center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed">
+          <div data-page="index" class="page">
+            <!--Main page navigation-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                  <a href="#" class="link icon-only">
+                      <i class=""><img src="img/icon.png" style="margin-top: 30%;"></i>
+                  </a>
+                </div>
+                <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+              </div>
+            </div>
+
+            <!--Main screen content-->
+            <div class="page-content">
+              <!--JS External Content Container-->
+              <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+                <div class="searchbar-input">
+                  <input type="search" placeholder="Search" id="search-input"><a href="#" class="searchbar-clear"></a>
+                </div><a href="#" class="searchbar-cancel">Cancel</a>
+              </form>
+              
+              <!-- Search Bar overlay -->
+              <div class="searchbar-overlay"></div>
+              <!-- This block will be displayed if nothing found -->
+              <div class="content-block searchbar-not-found">
+                <div class="content-block-inner">Nothing found</div>
+              </div>
+
+              <div id="content-block-main">
+                <!-- Content Here -->
+                <div id="loader-image">
+                  <img src="img/lg.curved-bar-spinner.gif" height="60%" width="60%">
+                </div>
+              </div>
+              <h1>&nbsp;</h1>
+            </div>
+
+            </div>
+            <!--Floating button SpeedDial-->
+            <div class="speed-dial">
+              <a href="#" class="floating-button"><i class="icon icon-plus"></i><i class="icon icon-close"></i></a>
+              <div class="speed-dial-buttons">
+               <p class="buttons-row"><a href="#" style="margin-right: 10px;margin-left: 10px;"><i id="calendar-default" class="icon material-icons">today</i></a></p>
+
+                 <p class="buttons-row"><a href="whatsapp://send?text=Hey if you want to keep up to date with the latest jobs openings follow this link : https://www.selibeng.com/" style="margin-right: 10px;margin-left: 10px;" class="item-link external"><i class="icon material-icons">share</i></a></p>
+                 <p class="buttons-row"><a href="#" style="margin-right: 10px;margin-left: 10px;" data-popup=".popup-doc" class="open-popup"><i class="icon material-icons">help</i></a></p>
+              </div>
+            </div>
+
+            </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- Documentation Popup -->
+    <div class="popup popup-doc">
+      <div class="content-block">
+        <h2>#SpaneWork Documentation</h2>
+          <hr>
+          <p>
+            <b>Introduction</b><br/>
+            #SpaneWork is a job seeking platform keeping you up-to-date with the latest in local and international jobs. It is an android
+            based platform running on <b>Android 2.3 Gingerbread</b> & above but for better performance <b>Android 4.1 KitKat</b> and above platforms
+            are advised.<br/><br/>
+            
+            <b>Features</b><br/>
+            1. View posts<br/>
+            2. View posts details<br/>
+            3. Share posts<br/>
+            4. Share app link<br/>
+            5. View calendar<br/>
+            6. App documentation<br/><br/>
+            
+           
+            <b>Terms of Use</b><br/>
+            Please note this is a post viewing platform and not a job application platform. No curriculum vitae will be received by our group
+            and no form of meetings are coordinated or arranged by our group. It is our users responsibility to validate any and all job
+            posts on the platform. Should any suspision arise on a particular job post please contact <b>helpdesk@nsgplesotho.com</b><br/><br/>
+
+            <b>License</b><br/>
+            #SpaneWork operates inline with the context applicable international laws governing commercial & opensource platforms.<br/><br/>
+
+            
+          </p>
+        <hr>
+        <center>
+        #SpaneWork Version 1.0.0
+        <p><a href="#" class="close-popup">
+        <img src="img/close.png" height="50px"><br>
+          Close
+          </a></p>
+        </center> 
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/kitchen-sink.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
