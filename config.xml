@@ -1,59 +1,79 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="www.nsgplesotho.com" version="1.0.0" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "www.nsgplesotho.com"
+    versionCode = "1" 
+    version     = "1.0.0" >
 
   versionCode is Android only
   version is in major.minor.patch format 
-                                                                  <name>Spane</name>
-    <description>
+  <name>Spane</name>
+
+  <description>
       A job seeking platform to help better your chances for that dream job
   </description>
-    <author email="lehlohonolomakoti@nsgplesotho.com" href="https://nsgplesotho.com">
+
+  <author href="https://nsgplesotho.com" email="lehlohonolomakoti@nsgplesotho.com">
       Neko Ntsane
       Nvulane Nhlapo
       Lehlohonolo Makoti
   </author>
-    <content src="index.html" />
-    <plugin name="cordova-plugin-splashscreen" source="npm" />
-    <preference name="orientation" value="portrait" />
-    <preference name="KeepRunning" value="false" />
-    <preference name="SplashScreen" value="screen" />
-    <preference name="android-build-tool" value="gradle" />
-    <preference name="SplashScreenDelay" value="10000" />
-    <plugin name="cordova-plugin-whitelist" source="npm" />
-    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
-    <plugin source="git" spec="https://github.com/floatinghotpot/cordova-admob-pro" />
-    <plugin name="cordova-universal-clipboard" source="npm" />
-    <plugin name="phonegap-plugin-barcodescanner" source="npm" />
-    <plugin name="cordova-plugin-x-toast" />
-    <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
-    <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
-    <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
-    <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <access browserOnly="true" origin="*selibeng.com" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="geo:*" />
-    <allow-intent href="whatsapp:*" />
-    <allow-intent href="mailto:*" />
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
-    <access origin="*" />
-    <splash src="img/splash.png" />
-    <splash src="audio/splash_sound.mp3" />
-    <icon src="img/icon_.png" />
-    <platform name="android">
+  <content src="index.html" />
+  <plugin name="cordova-plugin-splashscreen" source="npm" />
+  <preference name="orientation" value="portrait" />
+  <preference name="KeepRunning" value="false"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="android-build-tool" value="gradle" />  
+    
+  <preference name="SplashScreenDelay" value="10000" />
+
+  <plugin name="cordova-plugin-whitelist" source="npm" />
+  <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+  <plugin spec="https://github.com/floatinghotpot/cordova-admob-pro" source="git" />
+
+  <plugin name="cordova-plugin-inappbrowser"   source="npm" spec="1.0.1" />
+  <!-- <plugin name="cordova-plugin-network-information" source="npm" spec="1.0.1" /> -->
+
+  <plugin name="cordova-universal-clipboard" source="npm"/>
+  <plugin name="phonegap-plugin-barcodescanner" source="npm"/>
+  <plugin name="cordova-plugin-x-toast" />
+
+  <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+  <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+  <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+  <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+  
+  <!-- <access origin="whatsapp:*" launch-external="yes" /> -->
+  <!-- Allow links to web pages to open in a browser -->
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <access origin="*selibeng.com" browserOnly="true"/>
+  <!-- Allow SMS links to open messaging app -->
+  <allow-intent href="sms:*" />
+  <!-- Allow tel: links to open the dialer -->
+  <allow-intent href="tel:*" />
+  <!-- Allow geo: links to open maps -->
+  <allow-intent href="geo:*" />
+  <allow-intent href="whatsapp:*" />
+  <allow-intent href="mailto:*" />
+  <feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+  </feature>
+  <access origin="*"/>
+  <splash src="img/splash.png"/>
+  <splash src="audio/splash_sound.mp3"/>
+  <icon src="img/icon_.png" />
+  <platform name="android">
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="cordova-plugin-inappbrowser" spec="^1.0.1" />
-    <plugin name="cordova-plugin-camera" spec="^4.0.1" />
-    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-    <engine name="android" spec="^7.0.0" />
-    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="~7.0.0" />
+    <engine name="ios" spec="~4.5.4" />
+  
 </widget>
+
+    
+

@@ -145,7 +145,7 @@ $.ajax({
               '<div class="card-content-inner">' +
               '<p><h3>'+data.title.rendered+'</h3></p>' +
                '<p>'+data.content.rendered+'</p>' +
-               '<p class="buttons-row"><a href="'+data.link+'" class="button button-raised button-fill color-teal item-link external" style="font-weight:bold;">Read More</a><a  href="whatsapp://send?text='+data.link+'" style="text-align:center;font-weight:bold;" class="button button-raised button-fill color-teal item-link external">Share Post</a></p>'+
+               '<p class="buttons-row"><a id="openBrowser" onClick="openBrowser('+data.link+')" class="button button-raised button-fill color-teal item-link external" style="font-weight:bold;">Read More</a><a  href="whatsapp://send?text='+data.link+'" style="text-align:center;font-weight:bold;" class="button button-raised button-fill color-teal item-link external">Share Post</a></p>'+
                 // '<p class="color-gray">Views: '+value.link+'</p>' +
               '</div>' +
             '</div>' +
@@ -153,6 +153,35 @@ $.ajax({
         //console.log(value.title);
         fDate();
         $$('a').addClass('external');
+
+        document.getElementById("openBrowser").addEventListener("click", openBrowser);
+        function openBrowser(url_link) {
+           var url = url_link;
+           var target = '_self';
+           var options = "location = yes"
+           var ref = cordova.InAppBrowser.open(url, target, options);
+           
+           ref.addEventListener('loadstart', loadstartCallback);
+           ref.addEventListener('loadstop', loadstopCallback);
+           ref.addEventListener('loadloaderror', loaderrorCallback);
+           ref.addEventListener('exit', exitCallback);
+
+           function loadstartCallback(event) {
+              console.log('Loading started: '  + event.url)
+           }
+
+           function loadstopCallback(event) {
+              console.log('Loading finished: ' + event.url)
+           }
+
+           function loaderrorCallback(error) {
+              console.log('Loading error: ' + error.message)
+           }
+
+           function exitCallback() {
+              console.log('Browser is closed...')
+           }
+        }
       },
       complete: function(){
         $('#loader-spinner').hide();
@@ -223,51 +252,5 @@ $.ajax({
   }
 
 });
-
-//check network status
-function checkConnection() {
-    var networkState = navigator.connection.type;
-
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
-
-    alert('Connection type: ' + states[networkState]);
-}
-
-document.getElementById("openBrowser").addEventListener("click", openBrowser);
-function openBrowser() {
-   var url = 'https://cordova.apache.org';
-   var target = '_self';
-   var options = "location = yes"
-   var ref = cordova.InAppBrowser.open(url, target, options);
-   
-   ref.addEventListener('loadstart', loadstartCallback);
-   ref.addEventListener('loadstop', loadstopCallback);
-   ref.addEventListener('loadloaderror', loaderrorCallback);
-   ref.addEventListener('exit', exitCallback);
-
-   function loadstartCallback(event) {
-      console.log('Loading started: '  + event.url)
-   }
-
-   function loadstopCallback(event) {
-      console.log('Loading finished: ' + event.url)
-   }
-
-   function loaderrorCallback(error) {
-      console.log('Loading error: ' + error.message)
-   }
-
-   function exitCallback() {
-      console.log('Browser is closed...')
-   }
-}
 
 // $$('a').addClass('external');
